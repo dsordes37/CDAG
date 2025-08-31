@@ -4,6 +4,8 @@
     --color1: #ff5500;
     --color2: #f3f3f3;
     --color3: #101010;
+
+    --midle-info-width: 65%;
 }
 
 *{
@@ -32,6 +34,9 @@ body{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 2;
+}.logo>img{
+    width: 40px;
 }nav{
     display: flex;
     gap: 1rem;
@@ -43,12 +48,14 @@ body{
     text-decoration: none;
 }a:not(.call):hover{
     text-decoration: underline;
+    color: var(--color1);
+    transition: .4s;
 }a.call>button{
     padding: 1rem;
-    height: 30px;
+    height: 40px;
 
     border-radius: 20px;
-    border: 2px solid var(--color2);
+    
 
     background-color: var(--color1);
     color: var(--color2);
@@ -60,33 +67,36 @@ body{
     font-weight: bolder;
     font-size: 1.2rem;
 }a.call2>button{
-    background-color: var(--color2);
-    border-color: var(--color1);
+    background-color: transparent;
+    border: 2px solid var(--color1);
     color: var(--color1);
 }
 
 #hero{
     padding: 1rem;
     margin: 1rem;
-    height: 80vh;
+    min-height: 80vh;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 2rem;
 
-    background-color: var(--color1);
+    background-color: black;
+    background-image: url(images/laptop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25vw;
     
     border-radius: .5rem;
+    color: var(--color2);
 }#hero>div{
-    width: 65%;
-    text-align: center;
+    width: var(--midle-info-width);
 }
 
 h1{
     width: 100%;
-    font-size: 5rem;  
+    font-size: clamp(2.5rem, 6vw, 5rem);
 }h2{
     font-size: 3rem;
 }#sobre{
@@ -99,7 +109,7 @@ h1{
     padding: 2rem;
     
 }#sobre>p{
-    width: 60%;
+    width: var(--midle-info-width);
     text-align: justify;
 }#servicos{
     color: var(--color2);
@@ -112,16 +122,84 @@ h1{
     gap: 1rem;
     padding: 2rem 1rem;
 }#servicos>div{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 1rem;
-    width: 100%;
-}.servico{
-    width: 100%;
+    width: 70%;
+    height: 300px;
+}#servicos img{
+    height: 100%;
     aspect-ratio: 1;
-    background-color: var(--color2);
+    object-fit: cover;
+    border: 2px solid var(--color1);
+    border-radius: 1rem;
 
+}#servicos ul{
+    padding: 1rem;
+}#servicos li{
+    position: relative;
+}#servicos li::before{
+    content: '';
+    display: block;
+    background-color: #ff5500;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1rem;
+    border-radius: 50%;
+
+
+}.servico{
     border-radius: 1rem;
     border: 2px solid var(--color1);
+    height: 100%;
+    aspect-ratio: 2/1;
+
+    padding: 1rem;
+}.end{
+    align-self: flex-end;
+}.start{
+    align-self: flex-start;
+}
+
+footer{
+    background-color: var(--color3);
+    color: var(--color2);
+    padding: 1rem;
+}footer h2{
+    font-size: 1.5rem;
+    max-width: 350px;
+    margin-bottom: 1rem;
+}footer i{
+    font-size: 3.5rem;
+}footer>div{
+    display: flex;
+    width: 100%;
     
+}footer>div:first-child{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+    padding: 1rem;
+}footer>div:last-child{
+    justify-content: center;
+    padding-top: 1rem;
+}ul{
+    list-style: none;
+}.links{
+    display: flex;
+    gap: 2rem;
+}h3, h2{
+    color: var(--color1);
+}
+
+@media (max-width: 610px) {
+    :root{
+        --midle-info-width: 90%;
+    }#hero{
+        background-position: 50vw;
+        min-height: 65vh;
+    }
 }
