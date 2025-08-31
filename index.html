@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>CDAG</title>
 </head>
 <body>
@@ -35,15 +36,15 @@
         </section>
         <section id="sobre">
             <!--<p>Somos uma empresa de desenvolvimento de software especializada em criar soluções inovadoras e personalizadas para empresas. Nossa equipe de especialistas está pronta para transformar sua visão em realidade.</p>-->
-            <h2>Sobre nós</h2>
-            <p>Na CDAG, acreditamos que a tecnologia pode impulsionar o sucesso dos negócios. Com anos de experiência, nossa equipe multidisciplinar combina expertise técnica com uma abordagem centrada no cliente para entregar soluções de software de alta qualidade. Nosso compromisso é com a inovação, a excelência e a satisfação do cliente.</p>
+            <h2 data-aos="fade-down">Sobre nós</h2>
+            <p data-aos="zoom-in">Na CDAG, acreditamos que a tecnologia pode impulsionar o sucesso dos negócios. Com anos de experiência, nossa equipe multidisciplinar combina expertise técnica com uma abordagem centrada no cliente para entregar soluções de software de alta qualidade. Nosso compromisso é com a inovação, a excelência e a satisfação do cliente.</p>
             <a href="#" class="call call2"><button>Fale conosco!</button></a>
         </section>
         <section id="servicos">
-            <h2>Serviços</h2>
+            <h2 data-aos="fade-down">Serviços</h2>
             
             <div>
-                <article class="servico">
+                <article class="servico" data-aos="fade-right">
                     <h3>Desenvolvimento de Software</h3>
                     <p>Transformamos suas ideias em soluções digitais sob medida. Criamos softwares robustos e escaláveis para impulsionar seu negócio.</p>
                     <ul>
@@ -54,11 +55,11 @@
                         <li>E-commerce personalizado</li>
                     </ul>
                 </article>
-                <img src="https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg" alt="">
+                <img src="https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg" alt="" data-aos="fade-left">
             </div>
             <div>
-                <img src="https://images.pexels.com/photos/6266980/pexels-photo-6266980.jpeg" alt="">
-                <article class="servico">
+                <img src="https://images.pexels.com/photos/6266980/pexels-photo-6266980.jpeg" alt="" data-aos="fade-right">
+                <article class="servico" data-aos="fade-left">
                     <h3>Consultoria</h3>
                     <p>Oferecemos a expertise para você tomar decisões tecnológicas estratégicas. Mapeamos a melhor arquitetura para seu projeto, garantindo o máximo retorno.</p>
                     <ul>
@@ -71,7 +72,7 @@
                 </article>
             </div>
             <div>
-                <article class="servico">
+                <article class="servico" data-aos="fade-right">
                     <h3>Manutenção e Suporte</h3>
                     <p>Garantimos que suas aplicações funcionem com segurança e eficiência. Oferecemos suporte contínuo, atualizações e correções para que você foque em seu negócio.</p>
                     <ul>
@@ -81,12 +82,59 @@
                         <li>Atualizações de segurança</li>
                     </ul>
                 </article>
-                <img src="images/man_and_laptop.jpg" alt="">
+                <img src="images/man_and_laptop.jpg" alt="" data-aos="fade-left">
             </div>
 
 
         </section>
-        <section id=""></section>
+        <section id="clientes">
+            <h2 data-aos="fade-down">Clientes Satisfeitos</h2>
+
+            <article class="depoimento" data-aos="flip-up">
+                <img src="https://images.pexels.com/photos/33657183/pexels-photo-33657183.jpeg" alt="">
+                <div>
+                    <div>
+                        <h3>Luana Azevedo</h3>
+                        <span>CEO da Seer ltda.</span>
+                    </div>
+                    <p>"A CDAG tornou o processo de criar um sistema de gestão fácil e acessível. Eles criaram uma solução personalizada que nos poupa incontáveis horas. Recomendo muito!"</p>
+                </div>
+            </article>
+
+            <article class="depoimento" data-aos="flip-up">
+                <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg
+                " alt="">
+                <div>
+                    <div>
+                        <h3>Hélio Mants</h3>
+                        <span>Fundador da Space Y</span>
+                    </div>
+                    <p>"A equipe da CDAG superou nossas expectativas. Eles nos entregaram um sistema robusto e intuitivo que transformou nossa operação. Um serviço impecável do início ao fim."</p>
+                </div>
+            </article>
+
+            <article class="depoimento" data-aos="flip-up">
+                <img src="https://images.pexels.com/photos/7567211/pexels-photo-7567211.jpeg" alt="">
+                <div>
+                    <div>
+                        <h3>Mark Goldberg</h3>
+                        <span>CEO da Objective (antigo FaceJournal)</span>
+                    </div>
+                    <p>"Tínhamos um prazo apertado para o nosso aplicativo e a CDAG foi a parceira ideal. O resultado foi um app elegante, funcional e que foi um sucesso imediato com nossos usuários."</p>
+                </div>
+            </article>
+
+            <article class="depoimento" data-aos="flip-up">
+                <img src="https://images.pexels.com/photos/8052844/pexels-photo-8052844.jpeg" alt="">
+                <div>
+                    <div>
+                        <h3>Diogo Paiva</h3>
+                        <span>CEO do ILunch</span>
+                    </div>
+                    <p>"Precisávamos de uma plataforma segura e escalável, e a CDAG entregou exatamente isso. A expertise técnica deles foi crucial para o nosso crescimento. São verdadeiros especialistas."</p>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         <div>
@@ -130,5 +178,10 @@
             <span>&copy;CDAG todos os direitos reservados.</span>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

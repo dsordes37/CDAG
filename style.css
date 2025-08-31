@@ -194,7 +194,33 @@ footer{
 }h3, h2{
     color: var(--color1);
 }
+#clientes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 
+    padding: 2rem;
+}.depoimento{
+    display: flex;
+    justify-content: center;
+    width: var(--midle-info-width);
+    gap: 2rem;
+
+    position: relative;
+
+}.depoimento img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 60px;
+    border: 2px solid var(--color1);
+
+
+}.depoimento>div{
+    width: 80%;
+}
 @media (max-width: 610px) {
     :root{
         --midle-info-width: 90%;
