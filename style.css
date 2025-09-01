@@ -5,7 +5,7 @@
     --color2: #f3f3f3;
     --color3: #101010;
 
-    --midle-info-width: 65%;
+    --midle-info-width: 70%;
 }
 
 *{
@@ -124,21 +124,29 @@ h1{
 }#servicos>div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
-    width: 70%;
-    height: 300px;
+    width: var(--midle-info-width);
 }#servicos img{
-    height: 100%;
-    aspect-ratio: 1;
+    height: 400px;
+    display: block;
+    width: 30%;
     object-fit: cover;
     border: 2px solid var(--color1);
     border-radius: 1rem;
 
-}#servicos ul{
+}.servico{
+    border-radius: 1rem;
+    border: 2px solid var(--color1);
+    height: 400px;
+    width: 70%;
+
     padding: 1rem;
-}#servicos li{
+}.servico ul{
+    padding: 1rem;
+}.servico li{
     position: relative;
-}#servicos li::before{
+}.servico li::before{
     content: '';
     display: block;
     background-color: #ff5500;
@@ -151,13 +159,6 @@ h1{
     border-radius: 50%;
 
 
-}.servico{
-    border-radius: 1rem;
-    border: 2px solid var(--color1);
-    height: 100%;
-    aspect-ratio: 2/1;
-
-    padding: 1rem;
 }.end{
     align-self: flex-end;
 }.start{
@@ -170,22 +171,23 @@ footer{
     padding: 1rem;
 }footer h2{
     font-size: 1.5rem;
-    max-width: 350px;
     margin-bottom: 1rem;
 }footer i{
-    font-size: 3.5rem;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
 }footer>div{
     display: flex;
     width: 100%;
     
 }footer>div:first-child{
-    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.425);
     padding: 1rem;
+    gap: 1rem;
 }footer>div:last-child{
     justify-content: center;
     padding-top: 1rem;
+}footer nav{
+    width: fit-content;
 }ul{
     list-style: none;
 }.links{
@@ -193,11 +195,13 @@ footer{
     gap: 2rem;
 }h3, h2{
     color: var(--color1);
+}main h2{
+    text-align: center;
 }
 #clientes{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
 
     padding: 2rem;
@@ -208,24 +212,52 @@ footer{
     gap: 2rem;
 
     position: relative;
+    text-align: justify;
 
 }.depoimento img{
     width: 70px;
     height: 70px;
     object-fit: cover;
     object-position: center;
-    border-radius: 60px;
+    border-radius: 100%;
     border: 2px solid var(--color1);
 
 
 }.depoimento>div{
     width: 80%;
+}.depoimento span{
+    color: rgb(90, 90, 90);
 }
-@media (max-width: 610px) {
+
+@media (max-width: 750px){
     :root{
-        --midle-info-width: 90%;
-    }#hero{
+        --midle-info-width: 95%;
+    }#servicos img{
+        display: none;
+    }.servico{
+        width: 100%;
+        height: fit-content;
+    }
+}@media (max-width: 610px) {
+    #hero{
         background-position: 50vw;
         min-height: 65vh;
+    }.depoimento{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }.depoimento img{
+        width: 100px;
+        height: 100px;
+    }.depoimento span, .depoimento h3{
+        text-align: center;
+        display: block;
+    }header nav{
+        display: none;
+    }
+    footer>div:first-child{
+        flex-direction: column;
+        align-items: center;
+        
     }
 }
